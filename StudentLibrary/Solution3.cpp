@@ -1,5 +1,3 @@
-// Solution3.cpp
-
 #include "Solution3.h"
 
 // Don't forget to enable the exercise in the StudentConfiguration.h file !
