@@ -29,7 +29,7 @@ float Solution1::ConvertTemperature(float _value, TemperatureUnits _from, Temper
             //F -> C
             return (_value - 32.0f) * 5.0f / 9.0f;
         case TemperatureUnits::KELVIN:
-            //F -> C
+            //F -> K
             return (_value - 32.0f) * 5.0f / 9.0f + 273.15f;
         default:
             return _value; 
