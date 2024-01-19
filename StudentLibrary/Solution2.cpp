@@ -9,17 +9,20 @@
 
 float Solution2::GetBalance(const std::string& accountName)
 {
+    //File path par rapport a "account name"
     std::string filePath = "BankAccount/" + accountName + ".txt";
     std::ifstream file(filePath);
 
     if (!file.is_open())
     {
+        //Exception
         throw std::runtime_error("File not found");
     }
 
     float balance = 0.0f;
     std::string line;
 
+    //Lire chaque ligne du File
     while (std::getline(file, line))
     {
         std::istringstream lineStream(line);
@@ -28,6 +31,7 @@ float Solution2::GetBalance(const std::string& accountName)
 
         if (lineStream >> operation >> amount)
         {
+            //Update 
             if (operation == "DEPOSIT") {
                 balance += amount;
             }
@@ -35,6 +39,7 @@ float Solution2::GetBalance(const std::string& accountName)
                 balance -= amount;
             }
             else {
+                //Exception
                 throw std::exception("Invalid operation");
             }
         }
