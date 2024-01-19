@@ -14,7 +14,7 @@ float Solution1::ConvertTemperature(float _value, TemperatureUnits _from, Temper
         case TemperatureUnits::FAHRENHEIT:
             return (_value * 9.0f / 5.0f) + 32.0f;
         case TemperatureUnits::KELVIN:
-            return _value + 273.0f;
+            return _value + 273.15f;
         default:
             return _value; 
         }
@@ -24,7 +24,7 @@ float Solution1::ConvertTemperature(float _value, TemperatureUnits _from, Temper
         case TemperatureUnits::CELSIUS:
             return (_value - 32.0f) * 5.0f / 9.0f;
         case TemperatureUnits::KELVIN:
-            return (_value - 32.0f) * 5.0f / 9.0f + 273.0f;
+            return (_value - 32.0f) * 5.0f / 9.0f + 273.15f;
         default:
             return _value; 
         }
@@ -32,9 +32,9 @@ float Solution1::ConvertTemperature(float _value, TemperatureUnits _from, Temper
         switch (_to)
         {
         case TemperatureUnits::CELSIUS:
-            return _value - 273.0f;
+            return _value - 273.15f;
         case TemperatureUnits::FAHRENHEIT:
-            return (_value - 273.0f) * 9.0f / 5.0f + 32.0f;
+            return (_value - 273.15f) * 9.0f / 5.0f + 32.0f;
         default:
             return _value; 
         }
